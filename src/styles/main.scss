@@ -13,10 +13,7 @@
 }
 
 .banner-img {
-  display: block;
   object-fit: cover;
-  width: 390px;
-  height: 319px;
 }
 
 .icon-back {
@@ -24,7 +21,7 @@
   background-color: hwb(0 7% 93%/0.4);
   border-radius: 50%;
   color: #fff;
-  padding: 10px;
+  padding: 7px 10px;
   left: 20px;
   top: 60px;
 }
@@ -32,9 +29,9 @@
 .banner-title {
   color: #fff;
   position: absolute;
-  top: 250px;
-  left: 60px;
-  font-size: 40px;
+  top: 300px;
+  left: 80px;
+  font-size: 70px;
   font-family: Roboto;
 }
 
