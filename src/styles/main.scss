@@ -7,13 +7,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  width: 100vw;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
 
 .banner {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .banner-img {
   object-fit: cover;
+  min-height: 319px;
+  max-height: 450px;
 }
 
 .icon-back {
@@ -22,21 +34,25 @@
   border-radius: 50%;
   color: #fff;
   padding: 7px 10px;
-  left: 20px;
   top: 60px;
+  left: 16px;
 }
 
 .banner-title {
   color: #fff;
   position: absolute;
-  top: 300px;
-  left: 80px;
-  font-size: 70px;
-  font-family: Roboto;
+  width: 358px;
+  bottom: 16px;
+  font-size: 48px;
+  font-family: 'Roboto' ;
 }
 
 .img-playlist {
   width: 50px;
   height: 50px;
+}
+
+.nav-list {
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
