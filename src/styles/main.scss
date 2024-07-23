@@ -51,8 +51,75 @@ img {
   width: 50px;
   height: 50px;
 }
+.nav-container {
+  padding: 16px 36px 36px 36px;
+}
+.followInfo span {
+  display: block;
+  
+}
+.musicPlay {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  border-radius: 50%;
+}
+
+.musicPlay::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 20px;
+  background-color: black;
+  left: 20px;
+}
+
+.musicPlay::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 20px;
+  background-color: black;
+  right: 20px;
+}
+.musicInfo {
+display:flex;
+justify-content: space-between;
+padding: 16;
+}
+
+.followInfo {
+  display: flex;
+   align-items: center;
+ justify-content: space-between;
+}
+
+.btn-follow {
+  border: 1px solid white;
+  padding: 10px 12px;
+  background: transparent;
+  border-radius: $radius;
+}
+
+
 
 .nav-list {
   display: flex;
+  justify-content: space-between;
 }
+.nav-item {
+  list-style: none;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.icon {
+  font-size: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
