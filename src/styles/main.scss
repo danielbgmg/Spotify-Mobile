@@ -10,7 +10,7 @@
 
 body {
   background: $bg-color;
-  color: $text-color;
+  color: $text-color-white;
   font-family: 'Roboto' ;
 }
 
@@ -23,101 +23,178 @@ img {
   position: relative;
   display: flex;
   justify-content: center;
+  
+  .icon-back {
+    position: absolute;
+    background-color: hwb(0 7% 93%/0.4);
+    border-radius: 50%;
+    color: #fff;
+    padding: 7px 10px;
+    top: 60px;
+    left: 16px;
+  }
+
+  .banner-img {
+    object-fit: cover;
+    min-height: 319px;
+    max-height: 450px;
+  }
+
+  .banner-title {
+    color: #fff;
+    position: absolute;
+    width: 358px;
+    bottom: 16px;
+    font-size: 48px;
+  }
+
 }
 
-.banner-img {
-  object-fit: cover;
-  min-height: 319px;
-  max-height: 450px;
-}
-
-.icon-back {
-  position: absolute;
-  background-color: hwb(0 7% 93%/0.4);
-  border-radius: 50%;
-  color: #fff;
-  padding: 7px 10px;
-  top: 60px;
-  left: 16px;
-}
-
-.banner-title {
-  color: #fff;
-  position: absolute;
-  width: 358px;
-  bottom: 16px;
-  font-size: 48px;
-}
-
-.img-playlist {
-  width: 50px;
-  height: 50px;
-}
 
 .musicsInfo {
   display: flex;
   justify-content: space-between;
-  padding: 16px;
-}
-
-.monthlyListeners {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.monthlyListeners-btn {
-  display: flex;
-  gap: 20px;
-}
-
-.btn-follow {
-  border: 1px solid white;
-  padding: 8px 15px;
-  background: transparent;
-  border-radius: $radius;
-  color: $text-color-white;
-}
-
-.musicPlay {
-  position: relative;
-  width: 56px;
-  height: 56px;
-  display:flex;
-  justify-content: center;
   align-items: center;
-  background-color: $primary-color;
-  border-radius: 50%;
-}
+  padding: 16px;
 
-.musicPlay::after {
-  position: absolute;
-  content: "";
-  width: 4px;
-  height: 20px;
-  background-color: black;
-  left: 32px;
-  border-radius: 5px;
-}
+  .monthlyListeners {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 400;
+  }
 
-.musicPlay::before {
-  position: absolute;
-  content: "";
-  width: 4px;
-  height: 20px;
-  background-color: black;
-  right: 32px;
-  border-radius: 5px;
+  .monthlyListeners-btn {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    .btn-follow {
+      border: 1px solid white;
+      padding: 10px 17px;
+      background: transparent;
+      border-radius: $radius;
+      color: $text-color-white;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+  }
+  .musicPlay {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .musicPlay::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 20px;
+    background-color: black;
+    left: 32px;
+    border-radius: 5px;
+  }
+  
+  .musicPlay::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 20px;
+    background-color: black;
+    right: 32px;
+    border-radius: 5px;
+  }
+
 }
 
 .playlist {
   display: flex;
-  padding: 16px;
+  align-items: center;
+  padding: 0 16px;
+  gap: 22px;
+  
+  .capPlalist {
+    display: flex;
+    position: relative;
+    height: 38px;
+    cursor: pointer;
+
+    .imgPlaylist {
+      border-radius: 50%;
+      overflow: hidden;
+      height: 32px;
+      
+      img {
+        object-fit: cover;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .favIconPlalist {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary-color;
+      border-radius: 50%;
+      position: absolute;
+      left: 18px;
+      bottom: 0;
+      border: 2px solid $secondary-color;
+
+      .fa-heart {
+        font-size: 12px;
+      }
+    }
+    
+  }
+
+  .playlistName {
+    width: 100%;
+    .likedSong {
+      font-weight: 400;
+    }
+
+    .numberSongs {
+      display: flex;
+      align-items: center;
+      height: 15px;
+      margin-top: 4px;
+      span {
+        font-weight: 400;
+        font-size: 13px;
+        color: $text-color;
+      }
+
+      .dot {
+        display: flex;
+        font-size: 32px;
+        padding: 0 6px;
+      }
+    }
+  }
+
+  .arrow-rigth img {
+    cursor: pointer;
+  }
 }
 
-.imgPlaylist {
-  width: 38px;
-  height: 38px;
-}
+
 
 
 .nav-list {
@@ -125,25 +202,58 @@ img {
   justify-content: space-between;
 }
 
-.nav-item {
-  list-style: none;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
+
 
 .musics {
-  padding: 16px;
-}
+  padding: 40px 16px 0 16px;
 
-.list-song {
-  display: flex;
-  padding: 20px;
+  .listSong {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+
+    .listSong-item{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .listSong-number {
+        font-size: 14px;
+        font-weight: 400;
+      }
+  
+      .img-playlist {
+        width: 50px;
+        height: 50px;
+        margin: 0 16px;
+      }
+
+      .listSong-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 .nav-container {
   background: $nav-color;
   padding: 16px 36px 36px 36px;
+  position: sticky;
+  bottom: 0;
+
+  .nav-item {
+    list-style: none;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  
 }
 /*# sourceMappingURL=main.css.map */
