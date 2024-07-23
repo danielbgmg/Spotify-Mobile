@@ -1,0 +1,11 @@
+import './assets/banner.png';
+import './assets/arrow-right.svg';
+import './assets/3dots.svg';
+import './assets/image12.png';
+import './assets/image13.png';
+import './assets/image14.png';
+import './assets/image17.png';
+import './assets/music-1.png';
+import './assets/music-2.png';
+import './assets/music-3.png';
+import './styles/main.scss';
