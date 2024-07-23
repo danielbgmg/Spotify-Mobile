@@ -6,7 +6,9 @@
 }
 
 body {
-  width: 100vw;
+  background: linear-gradient(to right, #0F0C10 0%, #121212 70%);
+  color: #9e9e9e;
+  font-family: "Roboto";
 }
 
 img {
@@ -43,7 +45,6 @@ img {
   width: 358px;
   bottom: 16px;
   font-size: 48px;
-  font-family: "Roboto";
 }
 
 .img-playlist {
@@ -51,12 +52,28 @@ img {
   height: 50px;
 }
 
-.nav-container {
-  padding: 16px 36px 36px 36px;
+.musicsInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
 }
 
-.followInfo span {
+.monthlyListeners {
   display: block;
+  margin-bottom: 20px;
+}
+
+.monthlyListeners-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-follow {
+  border: 1px solid white;
+  padding: 8px 15px;
+  background: transparent;
+  border-radius: 20px;
+  color: #fff;
 }
 
 .musicPlay {
@@ -70,41 +87,34 @@ img {
   border-radius: 50%;
 }
 
-.musicPlay::before {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 20px;
-  background-color: black;
-  left: 20px;
-}
-
 .musicPlay::after {
   position: absolute;
   content: "";
   width: 4px;
   height: 20px;
   background-color: black;
-  right: 20px;
+  left: 32px;
+  border-radius: 5px;
 }
 
-.musicInfo {
+.musicPlay::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 20px;
+  background-color: black;
+  right: 32px;
+  border-radius: 5px;
+}
+
+.playlist {
   display: flex;
-  justify-content: space-between;
-  padding: 16;
+  padding: 16px;
 }
 
-.followInfo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.btn-follow {
-  border: 1px solid white;
-  padding: 10px 12px;
-  background: transparent;
-  border-radius: 20px;
+.imgPlaylist {
+  width: 38px;
+  height: 38px;
 }
 
 .nav-list {
@@ -120,8 +130,18 @@ img {
   gap: 8px;
 }
 
-.icon {
-  font-size: 20px;
+.musics {
+  padding: 16px;
+}
+
+.list-song {
+  display: flex;
+  padding: 20px;
+}
+
+.nav-container {
+  background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.8) 15%, rgb(18, 18, 18) 40%);
+  padding: 16px 36px 36px 36px;
 }
 
 /*# sourceMappingURL=main.css.map */
