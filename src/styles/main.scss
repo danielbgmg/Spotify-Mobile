@@ -21,8 +21,7 @@ img {
 
 .banner {
   position: relative;
-  display: flex;
-  justify-content: center;
+  @include displayFLex(flex, row, center, 0);
   
   .icon-back {
     position: absolute;
@@ -52,9 +51,7 @@ img {
 
 
 .musicsInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFLex(flex, row, space-between, center);
   padding: 16px;
 
   .monthlyListeners {
@@ -66,8 +63,7 @@ img {
   }
 
   .monthlyListeners-btn {
-    display: flex;
-    align-items: center;
+    @include displayFLex(flex, row, 0, center);
     gap: 28px;
 
     .btn-follow {
@@ -90,9 +86,7 @@ img {
     position: relative;
     width: 56px;
     height: 56px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    @include displayFLex(flex, row, center, center);
     background-color: $primary-color;
     border-radius: 50%;
     cursor: pointer;
@@ -121,13 +115,12 @@ img {
 }
 
 .playlist {
-  display: flex;
-  align-items: center;
+  @include displayFLex(flex, row, 0, center);
   padding: 0 16px;
   gap: 22px;
   
   .capPlalist {
-    display: flex;
+    @include displayFLex(flex, row, 0, 0);
     position: relative;
     height: 38px;
     cursor: pointer;
@@ -147,9 +140,7 @@ img {
     .favIconPlalist {
       width: 20px;
       height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include displayFLex(flex, row, center, center);
       background-color: $primary-color;
       border-radius: 50%;
       position: absolute;
@@ -171,8 +162,7 @@ img {
     }
 
     .numberSongs {
-      display: flex;
-      align-items: center;
+      @include displayFLex(flex, row, 0, center);
       height: 15px;
       margin-top: 4px;
       span {
@@ -182,7 +172,7 @@ img {
       }
 
       .dot {
-        display: flex;
+        @include displayFLex(flex, row, 0, 0);
         font-size: 32px;
         padding: 0 6px;
       }
@@ -208,14 +198,12 @@ img {
   padding: 40px 16px 0 16px;
 
   .listSong {
-    display: flex;
-    flex-direction: column;
+    @include displayFLex(flex, column, 0, 0);
     gap: 16px;
     margin-top: 24px;
 
     .listSong-item{
-      display: flex;
-      align-items: center;
+      @include displayFLex(flex, row, 0, center);
       cursor: pointer;
 
       .listSong-number {
@@ -248,9 +236,7 @@ img {
 
   .nav-item {
     list-style: none;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
+    @include displayFLex(flex, column, 0, center);
     gap: 8px;
     cursor: pointer;
   }
