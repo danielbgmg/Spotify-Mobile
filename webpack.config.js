@@ -17,6 +17,10 @@ module.exports = {
             filename: "styles.css"  // Nome do arquivo CSS de saída
         })
     ],
+    devServer: {
+        static: './dist',
+        hot: true
+    },
     mode: 'development',  // Modo de construção do webpack ('development', 'production' ou 'none')
     module: {
         rules: [
@@ -46,7 +50,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g)$/i, //Posso colocar um teste para cada tipo de arquivo 
                 use: [
                     {
                         loader: 'file-loader',
@@ -55,6 +59,21 @@ module.exports = {
                             context: path.resolve(__dirname, 'src/assets'),
                             outputPath: 'assets',
                             publicPath: 'assets',
+                            esModule: false,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                            context: path.resolve(__dirname, 'src/assets'),
+                            outputPath: 'animatio', //Posso também criar pastas para esses arquivos e separar eles
+                            publicPath: 'animation',
                             esModule: false,
                         },
                     },

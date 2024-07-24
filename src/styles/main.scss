@@ -21,7 +21,7 @@ img {
 
 .banner {
   position: relative;
-  @include displayFLex(flex, row, center, 0);
+  @include displayFLex(flex, row, center, none);
   
   .icon-back {
     position: absolute;
@@ -63,7 +63,7 @@ img {
   }
 
   .monthlyListeners-btn {
-    @include displayFLex(flex, row, 0, center);
+    @include displayFLex(flex, row, none, center);
     gap: 28px;
 
     .btn-follow {
@@ -115,12 +115,12 @@ img {
 }
 
 .playlist {
-  @include displayFLex(flex, row, 0, center);
+  @include displayFLex(flex, row, none, center);
   padding: 0 16px;
   gap: 22px;
   
   .capPlalist {
-    @include displayFLex(flex, row, 0, 0);
+    @include displayFLex(flex, row, none, none);
     position: relative;
     height: 38px;
     cursor: pointer;
@@ -162,7 +162,7 @@ img {
     }
 
     .numberSongs {
-      @include displayFLex(flex, row, 0, center);
+      @include displayFLex(flex, row, none, center);
       height: 15px;
       margin-top: 4px;
       span {
@@ -172,7 +172,7 @@ img {
       }
 
       .dot {
-        @include displayFLex(flex, row, 0, 0);
+        @include displayFLex(flex, row, none, none);
         font-size: 32px;
         padding: 0 6px;
       }
